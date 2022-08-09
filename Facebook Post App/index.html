@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Post App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8ec7ffe63c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <section class="post">
+                <header>
+                    Create Post
+                </header>
+                <form action="#">
+                    <div class="content">
+                        <img src="fb-icons/IMG_2236.JPG" style="border-radius: 50%;">
+                        <div class="details">
+                            <p>Syed Sumaim Ali</p>
+                            <div class="privacy">
+                                <i class="fas fa-user-friends "></i>
+                                <span>friends</span>
+                                <i class="fas fa-caret-down"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <textarea placeholder="What's on your mind? Syed Sumaim Ali" id="text"></textarea>
+                    <div class="theme-emoji">
+                        <img src="fb-icons/theme.svg">
+                        <img src="fb-icons/smile.svg">
+                    </div>
+                    <div class="options">
+                        <p>Add to your post</p>
+                        <ul class="list">
+                            <li><img src="fb-icons/gallery.svg"></li>
+                            <li><img src="fb-icons/tag.svg"></li>
+                            <li><img src="fb-icons/emoji.svg"></li>
+                            <li><img src="fb-icons/mic.svg"></li>
+                            <li><img src="fb-icons/more.svg"></li>
+                        </ul>
+                    </div>
+                    <button onclick="postingInputValue()">Post</button>
+                </form>
+            </section>
+            <section class="audience">
+                <header>
+                    <div class="arrow_back">
+                        <i class="fas fa-arrow-left"></i>
+                    </div>
+                    <p>Select Audience</p>
+
+                </header>
+                <div class="content_audience">
+                    <p>Who can see your post</p>
+                    <span>Your post will show up in News Feed, on your profile and in search results.</span>
+                </div>
+                <ul class="list">
+                    <li>
+                        <div class="column">
+                            <div class="icon"><i class="fas fa-globe-asia"></i> </div>
+                            <div class="details">
+                                <p>Public</p>
+                                <span>Anyone on or off Facebook</span>
+                            </div>
+                        </div>
+                        <div class="radio"></div>
+                    </li>
+                    <li class="active">
+                        <div class="column">
+                            <div class="icon"><i class="fas fa-user-friends"></i> </div>
+                            <div class="details">
+                                <p>Friends</p>
+                                <span>Your Friends on Facebook</span>
+                            </div>
+                        </div>
+                        <div class="radio"></div>
+                    </li>
+                    <li>
+                        <div class="column">
+                            <div class="icon"><i class="fas fa-user"></i> </div>
+                            <div class="details">
+                                <p>Specific</p>
+                                <span>Only show to some friends</span>
+                            </div>
+                        </div>
+                        <div class="radio"></div>
+                    </li>
+                    <li>
+                        <div class="column">
+                            <div class="icon"><i class="fas fa-lock"></i> </div>
+                            <div class="details">
+                                <p>Only me</p>
+                                <span>Only you can see your post</span>
+                            </div>
+                        </div>
+                        <div class="radio"></div>
+                    </li>
+                    <li>
+                        <div class="column">
+                            <div class="icon"><i class="fas fa-cog"></i> </div>
+                            <div class="details">
+                                <p>Custom</p>
+                                <span>Include and exclude friends</span>
+                            </div>
+                        </div>
+                        <div class="radio"></div>
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+    </div>
+    <div id="post" class="posted">
+        <div>
+
+            <img src="fb-icons/IMG_2236.JPG" style="border-radius: 50%; max-width: 52px; margin: 20px 25px;">
+            <p style="display: flex; position: absolute; left: 80px; top:35px; font-size: 17px; font-weight: 700;">Syed
+                Sumaim Ali</p>
+            <i class="fa-solid fa-trash" onclick="deletepost()"></i>
+            <div class="post_content">
+                <p id="textContent"></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

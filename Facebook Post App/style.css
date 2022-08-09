@@ -1,0 +1,325 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#00c6ff, #0078ff);
+}
+
+.container {
+    height: 480px;
+    width: 500px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0, 12);
+    overflow: hidden;
+    top: 5%;
+    position: absolute;
+}
+
+.container .post {
+    transition: height 0.50s ease;
+}
+
+.container.active .post {
+    margin-left: -500px;
+}
+
+.container.active {
+    height: 530px;
+}
+
+.container .wrapper {
+    display: flex;
+    width: 1000px;
+}
+
+.container section {
+    width: 500px;
+    background: #fff;
+}
+
+.post header {
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+    padding: 17px 0px;
+    border-bottom: 1px solid #bfbfbf;
+}
+
+.post form {
+    margin: 20px 25px;
+}
+
+.post form .content img {
+    max-width: 52px;
+}
+
+.post form :where(.content, .details .privacy),
+.audience .list li .column {
+    display: flex;
+    align-items: center;
+}
+
+.post form .content .details {
+    margin-left: 3px 0px 0px 12px;
+}
+
+form .content .details p {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+form .content .details .privacy {
+    background: #e4e6eb;
+    max-width: 98px;
+    font-size: 11px;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-top: 3px;
+    justify-content: space-between;
+}
+
+.details .privacy span {
+    font-size: 13px;
+    margin-top: 1px;
+    font-weight: 500;
+}
+
+.details .privacy i:last-child {
+    font-size: 13px;
+    margin-left: 1px;
+}
+
+.post form :where(textarea, button) {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
+.post form textarea {
+    resize: none;
+    margin-top: 30px;
+    min-height: 100px;
+    font-size: 18px;
+}
+
+.post form :where(.theme-emoji, .options),
+.audience .list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form .theme-emoji img {
+    cursor: pointer;
+}
+
+form .theme-emoji img:last-child {
+    max-width: 24px;
+}
+
+form .options {
+    border: 1px solid #b9b9b9;
+    height: 57px;
+    border-radius: 7px;
+    padding: 0 15px;
+    margin: 15px 0;
+}
+
+form .options p {
+    font-size: 15px;
+    font-weight: 500;
+    color: #595959;
+}
+
+form .options .list li {
+    list-style: none;
+    height: 42px;
+    width: 42px;
+    border-radius: 50%;
+}
+
+
+form .options :where(.list, li),
+.audience :where(.arrow_back, .icon, .radio) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.options .list li:hover {
+    background: #f0f1f4;
+}
+
+.options .list li img {
+    cursor: pointer;
+    width: 23px;
+}
+
+form button {
+    height: 53px;
+    border-radius: 7px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: no-drop;
+    color: #bcc0c4;
+    background: #e2e5e9;
+}
+
+form textarea:valid~button {
+    color: #fff;
+    background: #4599ff;
+    cursor: pointer;
+}
+
+.audience header {
+    padding: 17px 0;
+    text-align: center;
+    border-bottom: 1px solid #bfbfbf;
+    position: relative;
+}
+
+.audience header .arrow_back {
+    position: absolute;
+    left: 25px;
+    height: 35px;
+    width: 35px;
+    color: #747474;
+    background: #e4e6eb;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.audience header p {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.audience .content_audience {
+    margin: 20px 25px 0;
+}
+
+.audience .content_audience p {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.audience .content_audience span {
+    font-size: 14px;
+    color: #65676b;
+}
+
+.audience .list {
+    margin: 15px 16px 20px;
+}
+
+.audience .list li {
+    list-style: none;
+    margin-bottom: 5px;
+    padding: 12px 10px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.container .audience {
+    opacity: 0;
+    transition: opacity 0.12s ease;
+}
+
+.container.active .audience {
+    opacity: 1;
+}
+
+.audience .list li .column .details {
+    margin-left: 15px;
+}
+
+.list li .column .details p {
+    font-weight: 500;
+}
+
+.list li .column .details span {
+    font-size: 14px;
+    color: #65676b;
+}
+
+.audience .list li .column .icon {
+    height: 50px;
+    width: 50px;
+    background: #e4e6eb;
+    border-radius: 50%;
+}
+
+.audience .list li .radio {
+    height: 20px;
+    width: 20px;
+    border: 1px solid #707070;
+    border-radius: 50%;
+}
+
+.audience .list li.active .radio {
+    border: 2px solid #4599ff;
+}
+
+.audience .list li:hover {
+    background: #f0f1f4;
+}
+
+.audience .list li.active,
+.audience .list li:hover {
+    background: #e5f1ff;
+}
+
+.audience .list li.active .radio::before {
+    content: "";
+    height: 12px;
+    width: 12px;
+    background: #4599ff;
+    border-radius: inherit;
+}
+
+.posted {
+    display: flex;
+    position: absolute;
+    background: #fff;
+    top: 60%;
+    height: 20vh;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0, 12);
+    visibility: hidden;
+}
+
+.posted>textarea {
+    resize: none;
+    width: 100%;
+    margin-top: 10px;
+    min-height: 100px;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+}
+.post_content {
+    padding: 0px 35px;
+    border-top: 1px solid black;
+    width: 500px;
+    padding-top: 10px;
+}
+
+.fa-solid{
+    cursor: pointer;
+    color:  #7d7d7e;
+    font-size: 20px !important;
+    transition: 10s;
+    position: absolute;
+    left: 93%;
+    top: 20%;
+}
